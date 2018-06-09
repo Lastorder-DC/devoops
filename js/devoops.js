@@ -1299,14 +1299,14 @@ function drawGoogleChart(chart_data, chart_options, element, chart_type) {
 function DrawKnob(elem){
 	elem.knob({
 		change : function (value) {
-			//console.log("change : " + value);
+			console.debug("change : " + value);
 		},
 		release : function (value) {
-			//console.log(this.$.attr('value'));
-			console.log("release : " + value);
+			//console.debug(this.$.attr('value'));
+			console.debug("release : " + value);
 		},
 		cancel : function () {
-			console.log("cancel : ", this);
+			console.debug("cancel : ", this);
 		},
 		draw : function () {
 			// "tron" case
@@ -1903,7 +1903,7 @@ function MorrisChart2(){
 		labels: ['Y', 'Z', 'M']
 		})
 		.on('click', function(i, row){
-			console.log(i, row);
+			console.debug(i, row);
 		});
 }
 //
@@ -2767,7 +2767,7 @@ function SpringyNetmap(){
 	$('#springy-demo').springy({
 		graph: graph,
 		nodeSelected: function(node){
-			console.log('Node selected: ' + JSON.stringify(node.data));
+			console.debug('Node selected: ' + JSON.stringify(node.data));
 		}
 	});
 }
